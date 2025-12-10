@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
-  // Colors from blueprint [cite: 2]
   static const Color primaryGreen = Color(0xFF2E8B57);
   static const Color accentBlue = Color(0xFF00A4FF);
   static const Color backgroundWhite = Color(0xFFFFFFFF);
@@ -19,10 +18,10 @@ class AppTheme {
         primary: primaryGreen,
         secondary: accentBlue,
         background: backgroundWhite,
-        surface: cardGrey, // Cards use very light grey [cite: 2]
+        surface: cardGrey,
       ),
 
-      // Typography [cite: 2]
+      // Typography
       textTheme: GoogleFonts.robotoTextTheme().copyWith(
         titleLarge: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold), // Title 20-24
         headlineSmall: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600), // Headline 16-18
@@ -30,12 +29,12 @@ class AppTheme {
         bodySmall: const TextStyle(fontSize: 12), // Caption 12
       ),
 
-      // Card Theme [cite: 2]
-      cardTheme: CardTheme(
+      // Card Theme
+      cardTheme: CardThemeData(
         color: cardGrey,
-        elevation: 2, // Subtle elevation 2-6dp
+        elevation: 2,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16), // Corner radius 12-16px
+          borderRadius: BorderRadius.circular(16),
         ),
       ),
 
