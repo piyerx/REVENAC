@@ -11,10 +11,7 @@ class RevenacApp extends StatelessWidget {
       title: 'REVENAC',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      // Temp home until we implement the AppScaffold/BottomNav
-      home: const Scaffold(
-        body: Center(child: Text("Revenac Setup Complete")),
-      ),
+      home: const HomeScreen(),
     );
   }
 }
