@@ -1,27 +1,29 @@
 class User {
   final String id;
   final String name;
-  final String avatarUrl; // will use assets/ or network URLs
-  final int totalTokens;
+  final String walletAddress;
+  final String avatarUrl;
+  final double balance;
   final int rank;
-  final String city; // for Leaderboard filtering
+  final String city;
 
   User({
     required this.id,
     required this.name,
+    required this.walletAddress,
     required this.avatarUrl,
-    required this.totalTokens,
+    required this.balance,
     required this.rank,
     required this.city,
   });
 
-  // To create a User from JSON
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
       id: json['id'],
       name: json['name'],
+      walletAddress: json['walletAddress'],
       avatarUrl: json['avatarUrl'],
-      totalTokens: json['totalTokens'],
+      balance: (json['balance'] as num).toDouble(), // Safe conversion
       rank: json['rank'],
       city: json['city'],
     );
